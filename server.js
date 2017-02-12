@@ -6,8 +6,10 @@ var auth = require('hapi-auth-cookie');
 
 var server = new hapi.Server();
 server.connection({
-    port: ~~process.env.PORT || 8000,
-    routes: { cors:{origin: ['*'],additionalHeaders: ['cache-control', 'x-requested-with', 'accept-language']}}});
+    host:'localhost',
+    port: 8000,
+    routes: { cors:true}});
+  
 
 var config = {
     user: 'admin',

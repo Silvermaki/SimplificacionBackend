@@ -5,9 +5,9 @@ exports.endpoints = [
 	{method: 'GET', path: '/', config: {handler: function(request, reply){reply('Simplificacion db ...')}}},
 	{method: 'POST', path: '/register', config: authController.register},
 	{method: 'POST', path: '/login', config: authController.login},
-	{method: 'GET', path: '/processes', config: processController.getProcesses},
-	{method: 'GET', path: '/sections', config: processController.getSections},
-	{method: 'GET', path: '/tasks', config: processController.getTasks},
-	{method: 'GET', path: '/forms', config: processController.getForms},
-	{method: 'GET', path: '/fields', config: processController.getFields}
+	{method: 'POST', path: '/processes', config: processController.getProcesses},
+	{method: 'POST', path: '/sections', config: processController.getSections},
+	{method: 'POST', path: '/tasks', config: processController.getTasks},
+	{method: 'POST', path: '/forms', config: processController.getForms},
+	{method: 'POST', path: '/fields', config: processController.getFields}
 ];

@@ -22,7 +22,6 @@ exports.getSections = {
     	console.dir(request.payload);
 	    request2.input('mmSeccion', sql.NVarChar(40), request.payload.hash)
 	    request2.input('mmAccion', sql.Int, 4)
-	    request2.input('mmId_process', sql.Int, request.payload.id)
 	    request2.execute('dbo.ADM_Section', function(err, recordsets, returnValue, affected) {
 	    	console.dir("######################### Returned #########################");
 	    	console.dir(recordsets);

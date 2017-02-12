@@ -12,9 +12,12 @@ server.connection({
   
 
 var config = {
+    //user: 'saadmin',
+    //password: 'Simplificacion#2017.',
+    //server: '52.37.1.207', // You can use 'localhost\\instance' to connect to named instance 
     user: 'admin',
     password: 'Simplificacion!3261',
-    server: 'localhost', // You can use 'localhost\\instance' to connect to named instance 
+    server: 'localhost',
     database: 'simplificacion',
 }
 

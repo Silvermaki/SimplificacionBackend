@@ -9,5 +9,8 @@ exports.endpoints = [
 	{method: 'POST', path: '/sections', config: processController.getSections},
 	{method: 'POST', path: '/tasks', config: processController.getTasks},
 	{method: 'POST', path: '/forms', config: processController.getForms},
-	{method: 'POST', path: '/fields', config: processController.getFields}
+	{method: 'POST', path: '/fields', config: processController.getFields},
+	{method: 'POST', path: '/countries', config: processController.getCountries},
+	{method: 'POST', path: '/addperson', config: processController.addPerson},
+	{method: 'POST', path: '/getpersons', config: processController.getPersons}
 ];

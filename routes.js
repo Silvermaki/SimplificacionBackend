@@ -12,5 +12,6 @@ exports.endpoints = [
 	{method: 'POST', path: '/fields', config: processController.getFields},
 	{method: 'POST', path: '/countries', config: processController.getCountries},
 	{method: 'POST', path: '/addperson', config: processController.addPerson},
-	{method: 'POST', path: '/getpersons', config: processController.getPersons}
+	{method: 'POST', path: '/getpersons', config: processController.getPersons},
+	{method: 'POST', path: '/getcatalogues', config: processController.getCatalogues}
 ];

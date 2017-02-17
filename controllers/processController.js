@@ -15,6 +15,21 @@ exports.getProcesses = {
     }
 };
 
+exports.getCatalogues = {
+    handler: function(request, reply) {
+    	var request2 = new sql.Request();
+    	console.dir("######################### GET Catalogues #########################");
+    	console.dir(request.payload);
+	    request2.input('mmSeccion', sql.NVarChar(40), request.payload.hash)
+	    request2.input('Nombre', sql.VarChar(250), request.payload.name)
+	    request2.execute('dbo.CTL_GetCatalogue', function(err, recordsets, returnValue, affected) {
+	    	console.dir("######################### Returned #########################");
+	    	console.dir(recordsets);
+	        return reply(recordsets);
+	    });
+    }
+};
+
 exports.getSections = {
     handler: function(request, reply) {
     	var request2 = new sql.Request();

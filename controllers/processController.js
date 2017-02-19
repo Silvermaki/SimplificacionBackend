@@ -15,6 +15,26 @@ exports.getProcesses = {
     }
 };
 
+
+exports.getDepartment = {
+    handler: function(request, reply) {
+    	var request2 = new sql.Request();
+    	console.dir("######################### GET Department #########################");
+    	console.dir(request.payload);  
+	    request2.input('mmId_Department', sql.NVarChar(40), request.payload.id_Department)
+	    request2.input('mmSeccion', sql.NVarChar(40), request.payload.hash)
+	    request2.input('mmAccion', sql.Int, 4)
+	    request2.execute('dbo.ADM_Process', function(err, recordsets, returnValue, affected) {
+	    	console.dir("######################### Returned #########################");
+	    	console.dir(recordsets);
+	        return reply(recordsets);
+	    });
+    }
+};
+
+
+
+
 exports.getCatalogues = {
     handler: function(request, reply) {
     	var request2 = new sql.Request();

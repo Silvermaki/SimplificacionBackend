@@ -4,12 +4,16 @@ var inert = require('inert');
 var routes = require('./routes');
 var auth = require('hapi-auth-cookie');
 
+
+
 var server = new hapi.Server();
 server.connection({
     host:'localhost',
     port: 8000,
     routes: { cors:true}});
   
+
+
 
 var config = {
     //user: 'saadmin',
@@ -21,6 +25,8 @@ var config = {
     database: 'simplificacion',
 }
 
+
+
 sql.connect(config).then(function() {
   console.log("Connection with database succeeded.");
 }).catch(function(err) {
@@ -28,10 +34,10 @@ sql.connect(config).then(function() {
   console.log(err);
 });
 
+
+
 server.register([inert, auth], function(err){
-
 	server.route(routes.endpoints);
-
 	server.start(function () {
 	    console.log('Server running at:', server.info.uri);
 	});

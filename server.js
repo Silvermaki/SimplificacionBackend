@@ -20,7 +20,7 @@ var config = {
     //password: 'Simplificacion#2017.',
     //server: '52.37.1.207', // You can use 'localhost\\instance' to connect to named instance 
     user: 'admin',
-    password: 'Simplificacion!3261',
+    password: '',
     server: 'localhost',
     database: 'simplificacion',
 }
